@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+	<meta charset="UTF-8">
+	<title>Aturdidos Rock</title>
+	<!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<!-- codigo de colores y estilos escrito por nosotros -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tipografia openSans -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+<body>
+<header>
+	<div class="container">
+		<div class="row top">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+				<img src="images/logoAturdidos.jpg" alt="" class="logo"></a></div>
+			<div class="col-md-3"></div>
+			<div class="col-md-5">
+				<ul class='botonera'>
+					<li><a href="#nosotros" data-ancla="nosotros">Historia</a></li>
+					<li><a href="#servicios" data-ancla="servicios">Fechas</a></li>
+					<li><a href="#contacto" data-ancla="contacto">Contacto</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="principal vertical-centered-text" id="home">
+	<div class="col-md-8 cta"><h1>ATURDIDOS</h1> 
+			<h4>"ABRAN LAS RUTAS EN DOS QUE SALEN LOS TANQUES DEL ROCK DEL SUR"</h4>
+			<p></p>
+<a  target = _blank href="https://open.spotify.com/artist/3OB9MV9XZhS094BlurXZnQ" class="btn btn-primary orange">BIENVENIDO</a>
+
+
+		</div>
+</div>
+
+<div class="nosotros orange" id="nosotros">
+	<div class="container">
+		<h1>HISTORIA</h1>
+		<p>ATURDIDOS ES UN COMPENDIO VIVO DE SUEÑOS, HISTORIAS, CANCIONES, ELECTRICIDAD, POESÍAS, AMIGOS, VIAJES, MELODÍAS, SONIDOS, RITMO, BAILE, CALOR, PASIÓN, LOCURA Y SENTIMIENTO.<br>
+			"Compañeros de ocasiones y ATURDIDOS recitales"
+
+
+		</p>
+	</div>
+</div>
+
+
+<div class="container servicios" id="servicios">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Fechas</h1>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-md-3">
+			<img src="images/004-electric-guitar.png" alt="">
+			<h3>QUILMES 07/11</h3><br>
+			<p>Próximo domingo gratis en Quilmes con los amigos de @entre_circulos 🙌🦾</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/002-electric-guitar.svg" alt="">
+			<h3>LA PLATA - 27/11</h3><br>
+			<p>TEATRO NACIONAL</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/002-sound.png" alt="">
+			<h3>CABA - 12/02</h3><br>
+			<p>NICETO CLUB</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/004-rock-symbol-of-a-hand.svg" alt="">
+			<h3>CABA - 03/04</h3><br>
+			<p>Lollapalooza 2022</p>
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="container" id="contacto">
+		<div class="row">
+			<div class="col-md-12">
+					<h1>CONTACTO</h1><br><br>
+
+			</div>
+		</div>
+		<div class="row social">
+		<div class="col-3"></div>	
+					<div class="col-2">
+						<a href="mailto:contacto@aturdidosrock.com"><img src="images/001-mail.svg" alt=""></a></div>
+
+					<div class="col-2">
+						<a href="https://m.facebook.com/aturdidos?tsid=0.9406081470791696&source=result"  target="_blank"><img src="images/002-facebook-logo.svg" alt=""></a></div>
+
+
+					<div class="col-2">
+						<a target="_blank" href="https://www.instagram.com/aturdidos/?hl=es" ><img src="images/003-instagram-social-network-logo-of-photo-camera.svg" alt=""></a></div>	
+	</div>
+</footer>
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+        e.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset}, 600);
+        return false;
+    });
+
+});
+	
+</script>
+</body>
+</html>
